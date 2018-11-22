@@ -36,3 +36,54 @@ WebGL은 ... 좀 더 깊게 봐야 될 상황이 생기면 더 알아보기로 �
 - [webGL_slideShare](https://www.slideshare.net/hanmomhanda/web-gl-42962918)
 
 추후에 WebGL도 공부하면서 three JS 공부하기
+
+### ThreeJS
+
+- [ThreeJS_MDN](https://developer.mozilla.org/en-US/docs/Glossary/Three_js)
+
+설명 -> webGL중에서도 3D 그리기에 특화된 라이브러리 :D<br>
+
+- [공식DOC\_가자아아](https://threejs.org/)
+
+공식 사이트를 보고 자극 받자 JS+ Web API 어마어마하다 ...<br>
+그리고 !!!
+
+- [feConf\_전기환님발표](https://docs.google.com/presentation/d/1dAX9mid8tf2JaVGusy6rN_GeZPHcI3M9sY9Q2z02huU/edit)
+
+요걸 토대로 공부해봅시다
+
+- [우주\_예제](https://codepen.io/yahao2512/pen/NOawoy)
+
+- [threeJS_Editor](https://threejs.org/editor/)
+
+기본 개념 scene, camera and the renderer.
+공간, 카메라, 그리는애 scene, camera, renderer<br>
+렌더러에는 -> 부피 , 질감, 형태 등등을 가지고 그린다(Mesh, Geometry, Material)<br>
+
+기본 개념 Three JS -> 카메라 빛 메쉬 장면<br>
+
+```js
+// 1. 첫번째 장면 부터 만들자
+const scene = new THREE.Scene();
+
+//2 .그리는 애 추가해주자 :D
+const renderer = new THREE.WebGLRenderer({
+  alpha: true,
+  antialias: true
+  // antialias: true !!! 깨지는 부분 많이 막아줌 말 그대로 antialias
+}); // 3d data-> 2d로 render
+
+//3. camera
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+//PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
+```
+
+Mesh <-Geometry,Material
+Scene.add(Mesh)
+
+### ETC
+
+그냥 이상형 월드컵 만들어보고 싶어졌노 ...
+
+- [이상형월드컵](https://news.joins.com/DigitalSpecial/301)
